@@ -62,8 +62,6 @@ class MainActivity : AppCompatActivity() {
             catch (e: Exception){
 
             }
-
-
         }
     }
 
@@ -121,11 +119,11 @@ class MainActivity : AppCompatActivity() {
 
         override fun onResponse(response: Response) {
             if(_activity.get() != null){
-                val activty =  _activity.get()!!;
+                val activty =  _activity.get()!!
                 activty.runOnUiThread(Runnable {
                     Toast.makeText(activty, "Ur Img Uploaded A.O.K", Toast.LENGTH_LONG).show()
                     val imgPreview = activty.findViewById<ImageView>(R.id.imagePreviewView)
-                    imgPreview.setImageResource(android.R.color.transparent);
+                    imgPreview.setImageResource(android.R.color.transparent)
                 })
             }
 
